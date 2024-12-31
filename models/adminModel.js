@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+import mongoose from "mongoose"
  
 const adminSchema = new mongoose.Schema({
     username: {
@@ -21,7 +21,7 @@ const adminSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8,
-        maxlength: 50,
+        maxlength: 500,
         trim: true
     },
     role: {

@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
- 
+import mongoose from "mongoose" 
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8,
-        maxlength: 50,
+        maxlength: 500,
         trim: true
     },
     role: {
@@ -34,4 +34,4 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-export const user = mongoose.model("user", userSchema)
+export const user = mongoose.model("user", userSchema) 

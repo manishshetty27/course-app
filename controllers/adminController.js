@@ -1,4 +1,4 @@
-const { signupValidation, signinValidation } = require("../validator/adminValidator");
+import { signupValidation, signinValidation } from "../validator/adminValidator.js"
 export const signupController = (req, res)=> {
     const {username, email, password} = req.body
     const parsedData = signUpSchema.safeParse(req.body);
@@ -9,3 +9,7 @@ export const signupController = (req, res)=> {
         });
       }
 } 
+
+export const signinController = ()=> {
+  console.log("hi");
+}

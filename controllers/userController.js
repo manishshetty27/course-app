@@ -1,8 +1,10 @@
-const { signupValidation, signinValidation } = require("../validator/userValidator")
-const { user } = require("../models/userModel")
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
+import dotenv from "dotenv"
+import { signupValidation, signinValidation } from "../validator/userValidator.js"
+import { user } from "../models/userModel.js"
+import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
+
+dotenv.config();
 
 export const signupController = async (req, res) => {
     try{ 
